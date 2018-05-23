@@ -5,7 +5,7 @@ public:
         sort(nums.begin(), nums.end())
 
         int start = 0;
-        int end = nums.end();
+        int end = nums.size() - 1;
 
         while(start < end) {
             int sum = nums[start] + nums[end];
