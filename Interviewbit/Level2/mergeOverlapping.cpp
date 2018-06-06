@@ -24,7 +24,7 @@ vector<Interval> Solution::merge(vector<Interval> &A) {
 
         if (current.start > last.end) {
             ans.push_back(current);
-        } else if (current.end > last.end && current.start >= last.start) {
+        } else if (current.start >= last.start && current.start <= last.end && current.end > last.end) {
             ans[i-1].end = current.end;
         }
     }
